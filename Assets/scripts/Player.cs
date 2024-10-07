@@ -37,8 +37,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        Moviment = new Vector2(horizontal, 0);
+        float horizontal = Input.GetAxisRaw("Horizontal"); // poder controlar o personagem usando teclado configurado no unity
+        Moviment = new Vector2(horizontal, 0); // Movimentação com o vetor2 e o eixo Y = 0
         PhysicsCheck();
 
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -49,26 +49,28 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        XVelocity = Moviment.normalized.x * speed;
+        XVelocity = Moviment.normalized.x * speed; //Variavel velocidade ratonando o valor = 1
 
         animator.SetFloat("xVelocity", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
-        rb2d.velocity = new Vector2(XVelocity, rb2d.velocity.y);
+        rb2d.velocity = new Vector2(XVelocity, rb2d.velocity.y); // velocidade no eixo x e y 
+
         animator.SetFloat("yVelocity", rb2d.velocity.y);
-        animator.SetBool("moviment", Input.GetButton("Horizontal"));
+        animator.SetBool("moviment", Input.GetButton("Horizontal"));// animação de movimento
         Debug.Log(rb2d.velocity.y);
-        if (XVelocity * direction < 0)
+
+        if (XVelocity * direction < 0) // troca a direção do personagem metodo flip 
         {
             flip();
         }
 
-        if (Input.GetMouseButtonDown(1) && !isAttacking)
+        if (Input.GetButtonDown("Fire1") && !isAttacking) // Pega o botão do ataque 
         {
             Attack();
         }
 
 
     }
-    private void flip()
+    private void flip() // Metodo de rotação do personagem apenas o Eixo X foi alterado  
     {
         direction *= -1;
         Vector3 scale = transform.localScale;
@@ -77,7 +79,7 @@ public class Player : MonoBehaviour
 
     }
 
-    private void PhysicsCheck()
+    private void PhysicsCheck() // verifica se ha fisica 
     {
         //isGrounded = false;
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
@@ -91,7 +93,7 @@ public class Player : MonoBehaviour
         //     isGrounded = true;
         // }
     }
-    private RaycastHit2D Raycast(Vector3 origin, Vector2 rayDirection, float lenght, LayerMask mask)
+    private RaycastHit2D Raycast(Vector3 origin, Vector2 rayDirection, float lenght, LayerMask mask) // pega a posição do personagem e verifica se esta no chao ou não 
     {
         Vector3 pos = transform.position;
 
@@ -107,7 +109,7 @@ public class Player : MonoBehaviour
     {
 
         isAttacking = true;
-        animator.SetTrigger("sword atk"); // Aciona a animação de ataque
+        animator.SetTrigger("attack"); // Aciona a animação de ataque
 
         // Pode adicionar lógica de ataque aqui, como detectar colisões com inimigos
 

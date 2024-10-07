@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: bcea7dd9853851a4589de0ff125f79d5
+  productGUID: 8cd900c52c5e7a94bbae2be2cac39dc7
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Hero's Vow
+  productName: Supernova Echoes Of The Fusion
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -721,14 +721,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Hero's Vow
+  metroPackageName: Supernova Echoes Of The Fusion
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Hero's Vow
+  metroApplicationDescription: Supernova Echoes Of The Fusion
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -797,10 +797,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: bffc84ef-8f9d-4af2-89a0-bc209a3f0de4
+  cloudProjectId: e8b33519-8d63-47b3-af5e-31dc2f9f3e61
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Hero's Vow
+  projectName: Supernova Echoes Of The Fusion 2024-09-18_16-54-26
   organizationId: piterson_356
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
