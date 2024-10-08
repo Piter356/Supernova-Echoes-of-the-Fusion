@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         OriginalXScale = transform.localScale.x;
-
+       
     }
 
 
@@ -82,8 +82,9 @@ public class Player : MonoBehaviour
     private void PhysicsCheck() // verifica se ha fisica 
     {
         //isGrounded = false;
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
-        Debug.DrawRay(transform.position, Vector2.down, Color.grey);
+        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 2f, groundLayer);
+        Debug.DrawRay(transform.position, Vector2.down * 2, Color.grey);
+        Debug.Log(isGrounded);
         animator.SetBool("Isgrounded", isGrounded);
         //leftCheck = Raycast(new Vector2(footOffset[0].x, footOffset[0].y), Vector2.down, groundDistance, groundLayer);
         //rightCheck = Raycast(new Vector2(footOffset[1].x, footOffset[1].y), Vector2.down, groundDistance, groundLayer);
